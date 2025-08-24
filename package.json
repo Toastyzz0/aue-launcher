@@ -1,0 +1,41 @@
+{
+  "name": "auelauncher",
+  "version": "1.0.0",
+  "description": "A Unofficial Eaglercraft Launcher.",
+  "keywords": [
+    "AUE"
+  ],
+  "homepage": "https://github.com/Toastyzz0/aue-launcher#readme",
+  "bugs": {
+    "url": "https://github.com/Toastyzz0/aue-launcher/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toastyzz0/aue-launcher.git"
+  },
+  "license": "ISC",
+  "author": "Toastyzz0",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . AUELauncher --platform=win32 --arch=x64 --out=dist --overwrite",
+    "package:linux": "electron-packager . AUELauncher --platform=linux --arch=x64 --out=dist --overwrite"
+  },
+  "build": {
+    "appId": "com.toastyzz.auel",
+    "productName": "AUE Launcher",
+    "asarUnpack": [],
+    "win": {
+      "target": "nsis"
+    },
+    "npmRebuild": false
+  },
+
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.3",
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  }
+}

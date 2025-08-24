@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUE Launcher</title>
+    <link rel="stylesheet" href="./items/css/manage.css">
+  </head>
+  <body>
+    <br><br><br>
+    <div class="app-container">
+        <img src="./items/images/136807160.jpg" alt="Eaglercraft Logo" class="logo">
+        <h1 class="title">Manage Game Version</h1>
+        <p>Select and manage your Eaglercraft game version.</p>
+        <br>
+        <div class="version-list">
+            <center>
+            <p class="version-item">Version 1.12.2 <a href="./items/ec-versions/Eaglercraft_1.12_Offline_en_US.html"><button id="1" data-version="1.12.2" class="select-button">Select</button></a></p>
+            <p class="version-item">Version 1.8.8 <a href="./items/ec-versions/EaglercraftX_1.8_u53_Offline_Signed.html"><button id="2" data-version="1.8.8" class="select-button">Select</button></a></p>
+            <p class="version-item">Version 1.5.2 <a href="./items/ec-versions/Offline_Download_Version.html"><button id="3" data-version="1.5.2" class="select-button">Select</button></a></p>
+                <br>
+                <h3>Clients:</h3>
+            <p class="version-item">TuffClient <a href="./items/ec-versions/Eaglercraft_IR_TuffClient_1.12.2.html"><button class="select-button">Select</button></a></p>
+            <p class="version-item">Astra Client <a href="./items/ec-versions/astrawasmoffline.html"><button class="select-button">Select</button></a></p>
+            <p class="version-item">PixelClient <a href="./items/ec-versions/Eaglercraft_IR_PixelClient_1.12.2.html"><button class="select-button">Select</button></a></p>
+            <p class="version-item">Z-Client <a href="./items/ec-versions/Eaglercraft_IR_Z1.11.html"><button class="select-button">Select</button></a></p>
+            </center>
+        </div>
+        <p class="footer-text">Developed by Toastyzz0.</p>
+        <br><br><br><br>
+    <script>
+    const { ipcRenderer } = require("electron");
+
+    document.getElementById("1").addEventListener("click", () => {
+      ipcRenderer.send("close-window"); // ask main process to close
+    });
+    </script>
+    </body>
+    <script src="./renderer.js"></script>
+</html>
